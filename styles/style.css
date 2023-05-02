@@ -1,0 +1,234 @@
+:root {
+  --fuentePrincipal: "Poppins", sans-serif;
+  --primaryColor: #0a3871;
+  --secundaryColor: #f3f5fc;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --gris: #495057;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--fuentePrincipal);
+  font-size: 1.6rem;
+  line-height: 2;
+  background-color: var(--secundaryColor);
+}
+.header {
+  background-color: var(--primaryColor);
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 5em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header-left {
+  width: 35%;
+}
+.header-right {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+  gap: 3rem;
+}
+.header-right a {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: var(--blanco);
+  font-size: 3rem;
+}
+.logo {
+  color: var(--blanco);
+  font-size: 2rem;
+  margin: 0;
+}
+
+/*Contenedor*/
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contenedor-left {
+  width: 70%;
+  height: 75vh;
+}
+.contenedor-input {
+  width: 90%;
+  margin: 0 auto;
+}
+.inputCodificar {
+  resize: none;
+  width: 100%;
+  height: 60rem;
+  font-size: 4rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: text;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  color: var(--primaryColor);
+}
+.texto-advertencia {
+  color: var(--gris);
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.contenedor-botones {
+  width: 90%;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.boton {
+  width: 35%;
+  padding: 2rem;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.boton:first-child {
+  background-color: var(--primaryColor);
+  color: var(--blanco);
+}
+.boton:last-child {
+  background-color: var(--blanco);
+  border: 0.1rem solid var(--primaryColor);
+  color: var(--primaryColor);
+}
+.boton:first-child:hover,
+.boton:last-child:hover {
+  transform: scale(0.95);
+}
+.contenedor-right {
+  background-color: var(--blanco);
+  width: 20%;
+  height: 70vh;
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  padding: 1rem;
+}
+.contenedor-esperando{
+  display: block;
+}
+.contenedor-texto{
+  display: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#mensaje{
+  text-align: center;
+  font-size: 1.5rem;
+}
+#copiar{
+  display: none;
+  width: 90%;
+  padding: 2rem;
+}
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.textoUno {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 4rem;
+  text-align: center;
+}
+.textoDos {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--gris);
+  text-align: center;
+}
+.footer {
+  background-color: var(--primaryColor);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer > p {
+  color: var(--blanco);
+  text-align: center;
+  margin: 0;
+}
+@media (max-width: 428px) {
+  .header{
+    flex-direction: column;
+  }
+  .header-left,
+  .header-right{
+    width: 100%;
+  }
+  .logo{
+    text-align: center;
+  }
+    .contenedor{
+        flex-direction: column;
+    }
+    .contenedor-left{
+        width: 98%;
+        height: auto;
+    }
+    .inputCodificar{
+        height: 30rem;
+        font-size: 2rem;
+    }
+    .contenedor-botones{
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .boton{
+        width: 100%;
+    }
+    .contenedor-right{
+        width: 100%;
+        height: auto;
+        margin-top: 3rem;
+        margin-bottom: 7rem;
+        padding: 2rem;
+    }
+    .textoUno{
+        font-size: 2rem;
+    }
+    .textoDos{
+        font-size: 1.3rem;
+    }
+    .img{
+        display: none;
+    }
+    .header-left,
+    .header-right{
+        width: 50%;
+    }
+    
+}

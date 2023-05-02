@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+   <link rel="stylesheet" href="styles/style.css">
+
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Encriptador App</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <p class="logo">Encriptador App</p>
+        </div>
+        <div class="header-right">
+            <a href="https://github.com/Dev-socar" target="_blank"><span><i class='bx bxl-github'></i></span></a>
+            <a href="https://instagram.com/_omar.solis_?igshid=ZDdkNTZiNTM=" target="_blank"><span><i class='bx bxl-instagram' ></i></span></a>
+            <a href="https://www.linkedin.com/in/omar-fernando-solis/" target="_blank"><span><i class='bx bxl-linkedin-square'></i></span></a>
+        </div>
+    </header>
+    <main class="contenedor">
+        <div class="contenedor-left">
+            <div class="contenedor-input">
+                <textarea name="texto" class="inputCodificar" id="texto" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <p class="texto-advertencia">Solo letras minúsculas y sin acentos</p>
+            <div class="contenedor-botones">
+                <input type="button" value="Encriptar" id="encriptar" class="boton">
+                <input type="button" value="Desencriptar" id="desencriptar" class="boton">
+            </div>
+        </div>
+        <div class="contenedor-right">
+            <div class="contenedor-esperando">
+                <img src="resources/wait.svg" alt="Imagen de esperar a que escribas" class="img">
+                <p class="textoUno">Ningún mensaje fué encontrado</p>
+                <p class="textoDos">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div class="contenedor-texto">
+                <p class="textoDos" id="mensaje"></p>
+                <input type="button" value="Copiar texto" id="copiar" class="boton">
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p> &copy; Todos los derechos reservados Omar Solis - 2023</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
